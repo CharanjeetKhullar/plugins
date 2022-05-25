@@ -1,0 +1,12 @@
+<?php
+use Bluethink\Smp\Helper\Data;
+$helper = $this->helper(Data::class); 
+$buttonTitle = $helper->getButtonTitle(); 
+$currentProduct = $helper->getCurrentProduct();
+$productId = $currentProduct->getId();
+$sampleButton = $helper->isEnableButton($productId);
+$sampleProductId = $helper->getSampleProduct($productId);
+?>
+ <?php if($sampleButton){?>
+     <a class="action primary tocart" href="<?php echo $block->getUrl('buynow/cart/add/').'product/'.$sampleProductId['product_id'];  ?>/qty/1"><?= /* @noEscape */ $buttonTitle ?></a>
+  <?php } ?>

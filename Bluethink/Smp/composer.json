@@ -1,0 +1,25 @@
+{
+    "name": "bluethink/module-smp",
+    "description": "Magento2 Sample Product Module",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0",
+        "AFL-3.0"
+      ],
+     "authors": [
+        {
+          "name": "Bluethink",
+          "email": "pramod@bluethink.in",
+          "homepage" : "https://www.bluethink.in/"
+        }
+    ],
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Bluethink\\Smp\\": ""
+        }
+    }
+}
